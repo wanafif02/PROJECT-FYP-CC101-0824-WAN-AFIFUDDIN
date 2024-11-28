@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminDashboard">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        android:background="@drawable/backgroundmenu"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_admin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FBC901"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/imggymlogo"
+            android:layout_width="130dp"
+            android:layout_height="90dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/imggymlogo" />
+
+        <TextView
+            android:id="@+id/welcomeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="160dp"
+            android:layout_marginStart="20dp"
+            android:padding="6dp"
+            android:text="Hai Admin !"
+            android:textColor="#3B1B0D"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+      <!--  <RelativeLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/background2">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/imgright" />
+
+            <ImageView
+                android:id="@+id/imgshecdule"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/imgshecdule" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:text="Shecdule gym"
+                android:textAlignment="center"
+                android:textColor="#140435"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout> -->
+
+    <RelativeLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/background2">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/imgright" />
+
+        <ImageView
+            android:id="@+id/imgmanagegym"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/imgmanagegym" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:text="Manage gym"
+            android:textAlignment="center"
+            android:textColor="#140435"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout3"
+        android:layout_below="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/background2">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/imgright" />
+
+        <ImageView
+            android:id="@+id/imgmanagebooking"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/imgmanagebooking" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+           android:layout_toEndOf="@id/imgmanagebooking"
+            android:layout_marginStart="20dp"
+            android:text="Manage Booking"
+            android:textAlignment="center"
+            android:textColor="#140435"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout4"
+            android:layout_below="@+id/layout3"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/background2">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/imgright" />
+
+            <ImageView
+                android:id="@+id/imglogout"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/imglogout" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/imglogout"
+                android:layout_marginStart="20dp"
+                android:text="Logout"
+                android:textAlignment="center"
+                android:textColor="#140435"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

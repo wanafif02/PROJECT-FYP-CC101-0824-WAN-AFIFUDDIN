@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminSchedule">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        android:background="@drawable/backgroundmenu"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_admin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:letterSpacing="0.03"
+            android:text="Schedule Information"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_below="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:letterSpacing="0.03"
+            android:text="Choose date or time"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <!-- show back button -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/imgback"
+            android:backgroundTint="@color/black" />
+
+    </RelativeLayout>
+
+    <!--date-->
+    <RelativeLayout
+        android:id="@+id/dateGym1"
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:padding="10dp"
+        android:background="@drawable/background3">
+
+        <TextView
+            android:id="@+id/dateBook2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="Date :"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/dateGym"
+            android:layout_toEndOf="@+id/dateBook2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="DD/MM/YYYY"
+            android:focusable="false"
+            android:paddingLeft="15dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/doneBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/black"
+            android:layout_alignParentRight="true"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            style="@style/Widget.MaterialComponents.Button"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:layout_marginBottom="90dp"
+        android:layout_below="@+id/dateGym1"/>
+
+</RelativeLayout>

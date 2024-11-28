@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background4"
+    android:layout_marginTop="5dp">
+
+    <RelativeLayout
+        android:id="@+id/timeavailable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:padding="10dp">
+
+    <TextView
+        android:id="@+id/timeGym"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:layout_marginStart="40dp"
+        android:hint="00:00 am - 00:00 pm"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/totalPaxGym"
+            android:layout_toEndOf="@+id/timeGym"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="3dp"
+            android:hint="totalPaxGym1"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/undermaintainance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="#F9B301"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/timeGymMaintainance"
+            android:layout_below="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:hint="00:00 am - 00:00 pm"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/imgmaintainance"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/imgmaintainance"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:padding="6dp"
+            android:text="under maintainance"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

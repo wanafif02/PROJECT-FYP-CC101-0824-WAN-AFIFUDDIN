@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfilePicture">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        android:background="@drawable/backgroundmenu"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_user"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- show back button -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/imgback"
+            android:backgroundTint="@color/black" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.03"
+            android:text="Let's Get Personal \nUpload Your Picture!"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView_profile_dp"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/text"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background1"
+            android:scaleType="centerCrop" />
+
+        <!--- show button choose picture-->
+        <Button
+            android:id="@+id/textView_upload_pic_choose_button"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView_profile_dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/black"
+            android:text="Choose Picture"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+        <!--- show button upload-->
+        <Button
+            android:id="@+id/upload_pic_button"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView_profile_dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/textView_upload_pic_choose_button"
+            android:backgroundTint="#FAC802"
+            android:text="Done"
+            android:textAllCaps="false"
+            android:textColor="#FFF"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:elevation="10dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
